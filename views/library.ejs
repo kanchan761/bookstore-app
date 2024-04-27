@@ -1,0 +1,15 @@
+<%- include("./partials/header")%>
+<h1>library</h1>
+
+<%abd.forEach(function(book,index){ %>
+    <p><%= book.name%></p>
+    <p><%= book.author%></p>
+    <p><%= book.price%></p>
+    <p><%= book.language%></p>
+
+    <a href="/update/<%=index%>">update</a>
+    <a href="/delete<%=index%>">delete</a>
+<% }) %>
+<%- include("./partials/footer")%>
+
+
