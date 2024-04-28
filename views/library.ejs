@@ -7,9 +7,10 @@
     <p><%= book.price%></p>
     <p><%= book.language%></p>
 
-    <a href="/update/<%=index%>">update</a>
-    <a href="/delete<%=index%>">delete</a>
+    <a href="/update/<%= book._id%>">update</a>
+    <a href="/delete<%=book._id%>">delete</a>
 <% }) %>
+
 <%- include("./partials/footer")%>
 
 

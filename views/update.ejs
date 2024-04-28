@@ -1,11 +1,12 @@
 <%- include("./partials/header")%> <br><br>
-<form action="/update/<%= index%>" method="post">
+
+<form action="/update/<%= currentbook._id %>" method="post">
 
     
-    <input type="text" placeholder="book name" name="name" value="<%=gogo.name%>"><br><br>
-    <input type="text" placeholder="author name" name="author" value="<%=gogo.author%>"><br><br>
-    <input type="text" placeholder="price name" name="price" value="<%=gogo.price%>"><br><br>
-    <input type="text" placeholder="language " name="language" value="<%=gogo.language%>"><br><br>
+    <input type="text" placeholder="book name" name="name" value="<%= currentbook.name%>"><br><br>
+    <input type="text" placeholder="author name" name="author" value="<%= currentbook.author%>"><br><br>
+    <input type="text" placeholder="price name" name="price" value="<%= currentbook.price%>"><br><br>
+    <input type="text" placeholder="language " name="language" value="<%= currentbook.language%>"><br><br>
     <button>update</button>
     
 </form>
