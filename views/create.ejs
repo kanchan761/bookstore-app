@@ -1,12 +1,50 @@
-<%- include("./partials/header")%> <br><br>
-<form action="/create" method="post">
-    <input type="text" placeholder="book name" name="name"><br><br>
-    <input type="text" placeholder="author name" name="author"><br><br>
-    <input type="text" placeholder="price name" name="price"><br><br>
-    <input type="text" placeholder="language" name="language"><br><br>
-    <button>ADD</button>
+<%- include("./partials/header")%>
+
+<%- include("./partials/nav")%> 
+<div class=" background-image bg-gray-900 flex items-center justify-center h-screen bg-opacity-75">
     
-</form>
-<%- include("./partials/footer")%>
+    <div class="w-full max-w-md">
+        <form action="/create" class="bg-gray-800 bg-opacity-90 shadow-lg rounded-lg px-8 pt-6 pb-8 mb-4" method="post">
+            <div class="text-center" >
+                <img src="https://img.icons8.com/ios-filled/50/ffffff/user-male-circle.png" alt="User Icon" class="mx-auto mb-4">
+                <h2 class="text-3xl font-bold mb-6 text-green-300">Catalog a New Book</h2>
+            </div>
+            
+            <div class="mb-4">
+                <label class="block text-gray-400 text-sm font-bold mb-2" for="name" >
+                   Book Name
+                </label>
+                <input class="shadow appearance-none border border-2 border-green-400 rounded w-full py-2 px-3 bg-gray-700 text-gray-300 leading-tight focus:outline-none focus:shadow-outline focus:bg-gray-600" id="name" type="text" placeholder=" Book Name" name="name">
+            </div>
+            
+            <div class="mb-4">
+                <label class="block text-gray-400 text-sm font-bold mb-2" for="Author">
+                    Author Name
+                </label>
+                <input class="shadow appearance-none border border-2 border-cyan-700 rounded w-full py-2 px-3 bg-gray-700 text-gray-300 leading-tight focus:outline-none focus:shadow-outline focus:bg-gray-600" type="text" placeholder="Author Name" name="author">
+            </div>
+            
+            <div class="mb-4">
+                <label class="block text-gray-400 text-sm font-bold mb-2" for="price">
+                    Enter Price
+                </label>
+                <input class="shadow appearance-none border border-gray-700 rounded w-full py-2 px-3 bg-gray-700 text-gray-300 leading-tight focus:outline-none focus:shadow-outline focus:bg-gray-600" id="email" type="text" placeholder="Enter Price" name="price">
+            </div>
 
+            <div class="mb-6">
+                <label class="block text-gray-400 text-sm font-bold mb-2" for="language">
+                   Enter language
+                </label>
+                <input class="shadow appearance-none border border-gray-700 rounded w-full py-2 px-3 bg-gray-700 text-gray-300 mb-3 leading-tight focus:outline-none focus:shadow-outline focus:bg-gray-600" id="language" type="language" placeholder="Enter language" name="language" >
+            </div>
 
+            <div class="flex items-center justify-between">
+                <button class="bg-green-400 hover:bg-purple-700 text-black font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline">
+                   Submit
+                </button>
+            </div>
+        </form>
+    </div>
+    
+</div>
+    <%- include("./partials/footer")%>

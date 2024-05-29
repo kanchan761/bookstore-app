@@ -1,16 +1,42 @@
 <%- include("./partials/header")%>
-<h1>library</h1>
+<%- include("./partials/nav")%>
+<div class="h-screen bg-gray-800">
+<div class="text-center mb-12"><br>
+    <h1 class="text-4xl font-bold">
+                <span class="bg-clip-text text-transparent bg-gradient-to-r from-purple-400 to-pink-600 ">
+                    Welcome to Our Library
+                </span>
+            </h1>
+            <p class="text-gray-300 mt-4">Discover a world of books and knowledge.</p>
+        </div>
 
-<%abd.forEach(function(book,index){ %>
-    <p><%= book.name%></p>
-    <p><%= book.author%></p>
-    <p><%= book.price%></p>
-    <p><%= book.language%></p>
+    <% abd.forEach(function(book,index){ %>
+      <div>
+          <div class="flex p-4 gap-14 "> 
+              <div class="card bg-gray-600" style="width: 20rem ;">
+                <div class="card-body bg-gray-600 ">
+                <h1 class="text-green-100">Book Data</h1>
+             
+                <h5 class="card-title text-white"><span >Book Name - </span><%= book.name%></h5>
+                <h5 class="card-title text-white"><span>Book Author - </span><%= book.author%></h5>
+             
+              <h5 class="card-title text-white"><span>Book Price - </span><%= book.price%></h5>
+              <h5 class="card-title text-white"><span>BookLanguage - </span><%= book.language%></h5>
+        <br>
+              <a class="text-black text-decoration-none rounded font-semibold bg-green-300 px-3 py-1 text-2xl" href="/update/<%= book._id%>">Update</a>
+              <a class="text-black text-decoration-none ml-2 rounded font-semibold text-2xl bg-green-300 px-3 py-1" href="/delete/<%= book._id%> ">Delete</a>
+            
+            </div>
+        </div>
 
-    <a href="/update/<%= book._id%>">update</a>
-    <a href="/delete<%=book._id%>">delete</a>
-<% }) %>
+ <% }) %>
+    
+      </div>
+    </div>
 
+</div>
+            
 <%- include("./partials/footer")%>
+            
 
 

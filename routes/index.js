@@ -34,22 +34,17 @@ router.get('/readall', async function (req, res, next) {
   res.render('library', { abd: Allbook });
 });
 
-router.get('/delete/:index', function (req, res, next) {
-  tanisha_book.splice(req.params.index, 1)
-  res.redirect("/readall")
-});
-
 router.get('/update/:index', async function (req, res, next) {
   // const i = req.params.index
   // const b = tanisha_book[i]
   // res.render("update",{gogo:b,index:i})
 
   const index = req.params.index
-  const currentbook = await bookmodel.find({
+  const currentbook = await bookmodel.findOne({
     _id: index
   })
-  res.render("update", { currentbook })
-  console.log(currentbook)
+  res.render("update", { currentbook:currentbook })
+  
 });
 
 router.post('/update/:index', async function (req, res, next) {
@@ -62,31 +57,30 @@ router.post('/update/:index', async function (req, res, next) {
   await bookmodel.findOneAndUpdate(
     {
       _id: index
-    }, {
-
+    },
+    {
     name: req.body.name,
     author: req.body.author,
     price: req.body.price,
     language: req.body.language,
-            
   })
 
   res.redirect("/readall")
 
 });
 
-router.get("/delete/:index", async (req,res,next)=>{
-  const index = req.params.index
+router.get("/delete/:index", async (req, res, next)=>{
+  const id = req.params.index
 
   await bookmodel.findOneAndDelete({
-    _id: index
+    _id: id
   })
   res.redirect("/readall")
 })
 
-
-
-
+router.get('/about',  function (req, res, next) {
+  res.render('about');
+});
 module.exports = router;
 
 

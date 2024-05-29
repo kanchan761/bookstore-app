@@ -1,3 +1,56 @@
+
 <%- include("./partials/header")%>
-<h1>home</h1>
+<div class="background-image bg-gray-900 bg-opacity-75 text-white min-h-screen">
+    
+    <%- include("./partials/nav")%>
+    <!-- Navigation Bar -->
+    
+    <!-- Home Content -->
+    <div class="container mx-auto px-4">
+        <!-- Heading -->
+        <div class="text-center mb-12">
+            <h1 class="text-4xl font-bold">
+                <span class="bg-clip-text text-transparent bg-gradient-to-r from-purple-400 to-pink-600">
+                    Welcome to Our Bookstore Application
+                </span>
+            </h1>
+            <p class="text-gray-300 mt-4">Explore, discover, and share books with our comprehensive bookstore application.</p>
+        </div>
+        
+        <!-- Features Section -->
+        <section class="mb-12">
+            <h2 class="text-3xl font-bold mb-6 text-center">Features</h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <div class="bg-gray-800 bg-opacity-90 p-6 rounded-lg shadow-lg text-center">
+                    <img src="https://img.icons8.com/ios-filled/100/ffffff/open-book.png" alt="Library Icon" class="mx-auto mb-4">
+                    <h3 class="text-2xl font-bold mb-2">Extensive Library</h3>
+                    <p class="text-gray-300">Access thousands of books across various genres and categories.</p>
+                </div>
+                <div class="bg-gray-800 bg-opacity-90 p-6 rounded-lg shadow-lg text-center">
+                    <img src="https://img.icons8.com/ios-filled/100/ffffff/add-book.png" alt="Add Book Icon" class="mx-auto mb-4">
+                    <h3 class="text-2xl font-bold mb-2">Easy Book Entry</h3>
+                    <p class="text-gray-300">Add new books to our collection effortlessly with our user-friendly form.</p>
+                </div>
+                <div class="bg-gray-800 bg-opacity-90 p-6 rounded-lg shadow-lg text-center">
+                    <img src="https://img.icons8.com/ios-filled/100/ffffff/search.png" alt="Search Icon" class="mx-auto mb-4">
+                    <h3 class="text-2xl font-bold mb-2">Advanced Search</h3>
+                    <p class="text-gray-300">Find your favorite books quickly with our powerful search tools.</p>
+                </div>
+            </div>
+        </section>
+        
+        <!-- About Section -->
+ 
+        <!-- Promotional Section -->
+        <section class="mb-12">
+            <h2 class="text-3xl font-bold mb-6 text-center">Join Our Community</h2>
+            <div class="flex items-center justify-center">
+                <a href="/create" class="bg-purple-500 hover:bg-purple-700 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline">Get Started</a>
+            </div>
+        </section>
+    </div>
+
+</div>
+
+
 <%- include("./partials/footer")%>
